@@ -1,11 +1,6 @@
 const menuBars = document.getElementById('menu-bars');
 const overlay = document.getElementById('overlay');
 const navItems = document.querySelectorAll('ul li');
-const nav1 = document.getElementById('nav-1');
-const nav2 = document.getElementById('nav-2');
-const nav3 = document.getElementById('nav-3');
-const nav4 = document.getElementById('nav-4');
-const nav5 = document.getElementById('nav-5');
 
 function navAnimation(direction1, direction2) {
     navItems.forEach((el, i) => el.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`));
@@ -26,4 +21,4 @@ function toggleNav() {
     }
 }
 menuBars.addEventListener('click', toggleNav);
-navItems.forEach(el => el.addEventListener('click', () => toggleNav()));
+navItems.forEach(el => el.addEventListener('click', toggleNav));
